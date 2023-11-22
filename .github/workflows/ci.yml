@@ -1,0 +1,17 @@
+# .github/workflows/ci.yml
+name: CI
+
+on: [push]
+
+jobs:
+  build_job:
+    name: Build my job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Run shell script
+        run: |
+          echo "running script"
+          chmod +x ./hook_bva_android.sh
+          ./hook_bva_android.sh

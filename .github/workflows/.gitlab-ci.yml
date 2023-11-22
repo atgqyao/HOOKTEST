@@ -1,0 +1,9 @@
+# .gitlab-ci.yml
+stages:
+  - build_job
+
+build_job:
+  stage: build_job
+  script:
+    - echo "running .gitlab-ci.yml"
+    - ./hook_bva_android.sh
